@@ -53,10 +53,20 @@ function mostraIdade({idade}){
   return idade
 }
 
-document.body.innerText = mostraIdade(jogador)
+// document.body.innerText = mostraIdade(jogador)
 
 //-----------------------------------------------------------
-//Rest Operator
+//Rest Operator - É uma maneira de fazer desestruturação
+const arr = [1,2,3,4,5,6,7,8,9,10];
+
+//atribuição automática de first a 1 e second a 2
+const [first, second, ...rest] = arr;
+
+document.body.innerText = JSON.stringify({first, second, rest})
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
-//O nullish coalescing operator é pra fazer com que o zero 
-//não seja interpretado como valor nulo pelo JavaScript
+//O nullish coalescing operator (operador de coalescência nulo) 
+//é pra fazer com que o zero não seja interpretado como valor nulo pelo JavaScript
 
 //lembrando que os seguintes valores são considerados não válidos
 // 0, '', [], false, undefined, null => 'falsy'

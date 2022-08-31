@@ -3,7 +3,7 @@
 const jogador = {
   name: 'Romário',
   idade: 32,
-  origem: {
+  residencia: {
     cidade: 'Rio de Janeiro',
     bairro: 'Morada Real',
     rua: 'Severino Dutra',
@@ -12,7 +12,7 @@ const jogador = {
 };
 
 // in: verifica se tal informação existe dentro do objeto
-// document.body.innerText = ('origem' in jogador)
+// document.body.innerText = ('residencia' in jogador)
 
 //Object.keys() - retorna um vetor com todas as chaves do objeto
 // document.body.innerText = Object.keys(jogador)
@@ -29,18 +29,18 @@ const jogador = {
 //Desestruturação
 //Remover parte do objeto p/ uma variável a parte
 
-// const origem = jogador.origem
+// const residencia = jogador.residencia
 //podemos fazer tambem:
-// const {origem, idade} = jogador;
+// const {residencia, idade} = residencia;
 
 //podemos também renomear os atributos
-// const {origem: origin, idade: age} = jogador
+// const {residencia: residence, idade: age} = jogador
 //não podemos esquecer de passar o novo parâmetro na chamada tb
 
 //tb conseguimos atribuir valores padrão para variáveis
 //o "apelido" só será exibido caso ele não conste no objeto original
-// const {origem: origin, idade: age, apelido = 'Baixinho'} = jogador
-// document.body.innerText = JSON.stringify({origin, age, apelido})
+// const {residencia: residence, idade: age, apelido = 'Baixinho'} = jogador
+// document.body.innerText = JSON.stringify({residence, age, apelido})
 
 //Desestruturação pode ser usado em qualquer lugar que utilize objetos, 
 //como parâmetro de funções, variáveis, consultores, métodos de classes, etc;
@@ -54,6 +54,9 @@ function mostraIdade({idade}){
 }
 
 document.body.innerText = mostraIdade(jogador)
+
+//-----------------------------------------------------------
+//Rest Operator
 
 
 

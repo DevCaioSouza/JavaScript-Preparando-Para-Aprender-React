@@ -23,19 +23,19 @@
 
 //-----Exemplo_02-----
 
-fetch('https://api.github.com/users/manoCaioZ')
-  .then(res => {
-    res.json()
-  .then(body => {
-    console.log(body)
-    })
-  })
-  .catch(err =>{
-    console.log(err)
-  })
-  .finally(() =>{
-    console.log('deu tudo certo')
-  })
+// fetch('https://api.github.com/users/manoCaioZ')
+//   .then(res => {
+//     res.json()
+//   .then(body => {
+//     console.log(body)
+//     })
+//   })
+//   .catch(err =>{
+//     console.log(err)
+//   })
+//   .finally(() =>{
+//     console.log('deu tudo certo')
+//   })
 
 //res.text()-> o text() é uma promise, que irá retornar uma string
 //podemos tambem usar json()
@@ -45,3 +45,36 @@ fetch('https://api.github.com/users/manoCaioZ')
 //esses dados de alguma forma
 
 //o finally sempre será executado independente do sucesso ou não da promessa
+
+//-----Exemplo_03----- => Usando Async / Await
+
+//nesse caso o await precisa ser resolvido para o restante do código ser lido
+
+// async function buscaDadosNoGithub(){
+//   const res = await fetch('https://api.github.com/users/manoCaioZ');
+//   const body = await res.json()
+
+//   console.log(body);
+// }
+
+// buscaDadosNoGithub()
+
+//usando Try Catch
+
+
+async function buscaDadosNoGithub() {
+  try {
+    const res = await fetch('https://api.github.com/users/manoCaioZ');
+    const body = await res.json();
+
+    console.log(body)
+  } catch (err) {
+    console.log(err)
+  } finally {
+    console.log('funcionando certinho');
+  }
+}
+
+buscaDadosNoGithub()
+
+//OBS: toda função iniciada com async vira uma promise
